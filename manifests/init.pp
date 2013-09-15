@@ -2,6 +2,11 @@
 #
 # Installs Firefox for OS X.
 #
+# === Parameters:
+#
+# [*language*] Language of Firefox
+# [*version*] Version of Firefox
+#
 # === Examples
 #
 #  class { firefox:
