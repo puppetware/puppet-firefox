@@ -10,7 +10,7 @@ Supported Platforms:
 Examples
 --------
 
-Install FireFox:
+Install FireFox 24.0 by default:
 
 ```
 class {'firefox': }

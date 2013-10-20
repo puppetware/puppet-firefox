@@ -14,14 +14,11 @@ class firefox::install {
   $language = $firefox::language
   $version = $firefox::version
 
-  case $::kernel {
-    'Darwin': {
-       $source = "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${version}/mac/${language}/Firefox%20${version}.dmg"
-    }
-    default: {
-      fail("Unsupported Kernel: ${::kernel} operatingsystem: ${::operatingsystem}")
-    }
+  $source = downcase($::kernel) ? {
+    'darwin' => "https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/${version}/mac/${language}/Firefox%20${version}.dmg",
+    default => fail("Unsupported Kernel: ${::kernel} operatingsystem: ${::operatingsystem}")
   }
+
   package {"Firefox-${version}":
     ensure => installed,
     source => $source,

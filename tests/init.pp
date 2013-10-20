@@ -1,1 +1,1 @@
-include firefox
+class {'firefox': }
