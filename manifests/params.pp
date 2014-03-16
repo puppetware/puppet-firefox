@@ -13,6 +13,6 @@
 class firefox::params {
 
   $language = 'en-US'
-  $version = '24.0'
+  $version = '27.0.1'
 
 }
