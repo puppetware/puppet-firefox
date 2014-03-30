@@ -21,7 +21,7 @@ Install specific version and language of FireFox:
 ```
 class {'firefox':
   language => 'en-US',
-  version => '23.0',
+  version => '28.0',
 }
 ```
 
